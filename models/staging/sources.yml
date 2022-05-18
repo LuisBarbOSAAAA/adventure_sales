@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: adventure_dash_vendas1
+    schema: adventure_dash_vendas
+    description: Copia dos dados mais relevantes no erp da Adventure Works focando a contrucao do dashboard de vendas
+    tables:
+      - name: cliente
+        description: Tabela que possui identificações de cliente pessoa física e lojas físicas, para diferenciação de B2B e B2C e rastrear os melhores clientes
+      - name: dados_pessoa_cliente
+        description: Tabela onde há os dados dos nomes e sobrenomes dos clientes
+      - name: detalhes_pedidos
+        description: Tabela que identifica produto, quantidade e valor gasto em cada código de compra gerado
+      - name: endereco_cidade
+        description: Tabela onde ha informação do endereco e da cidade onde houve a solicitaçao de entrega dos pedidos
+      - name: endereco_estado
+        description: Tabela onde ha o codigo referente ao estado onde houve a solicitaçao de entrega dos pedidos
+      - name: endereco_pais
+        description: Tabela onde ha informação do codigo do pais onde houve a solicitaçao de entrega dos pedidos
+      - name: fato_pedido
+        descreption: Tabela onde ha as principais informacoes sobre o pedido de compra como o codigo de compra, endereco de entrefa, data de pedido e afins
+      - name: header_motivo_venda
+        description: Tabela onde ha a informacao a associacao do numero do pedido com a razao da compra do produto
+      - name: motivo_venda
+        description: Tabela indice que expoe qual razao de compra cada codigo acompanha
+      - name: produto
+        description: Tabela que traz informacoes sobre os produtos, como codigo de produto, nome do produto e características físicas
+      - namen: tipo_cartao
+        description: Tabela que associa o codigo do cartao de credito com o seu tipo
