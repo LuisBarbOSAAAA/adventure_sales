@@ -1,1 +1,1 @@
-select * from {{source('adventure_dash_vendas1','produto')}}
+select * from {{source('adventure_dash_vendas','cliente')}}

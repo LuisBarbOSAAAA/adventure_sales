@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: adventure_dash_vendas
+    schema: adventure_dash_vendas
     description: Copia dos dados mais relevantes no erp da Adventure Works focando a contrucao do dashboard de vendas
     tables:
       - name: cliente
