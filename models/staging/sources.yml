@@ -13,3 +13,4 @@ sources:
     - name: motivo_venda
     - name: produto
     - name: tipo_cartao
+    - name: estabelecimento
