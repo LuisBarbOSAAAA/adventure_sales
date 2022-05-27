@@ -1,0 +1,9 @@
+version: 2
+
+models:
+    - name: dim_cartao
+      columns:
+        - name: id_cartao
+          tests:
+            - unique
+            - not_null
