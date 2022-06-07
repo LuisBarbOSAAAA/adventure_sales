@@ -1,0 +1,10 @@
+version: 2
+
+models:
+    - name: dim_produto
+      description: tabela com informacoes sobre os produtos comercializados na operacao
+      columns:
+        - name: id_produto
+          tests:
+            - not_null
+ 
