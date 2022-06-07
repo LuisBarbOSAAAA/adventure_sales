@@ -3,6 +3,8 @@ version: 2
 models:
     - name: dim_cartao
       description: tabela com informacoes sobre tipo de cartao
+      config:
+          materialized: table
       columns:
         - name: id_cartao
           tests:
