@@ -1,0 +1,13 @@
+version: 2
+
+models:
+    - name: dim_cliente
+      description: tabela com informacoes sobre os clientes
+      columns:
+        - name: id_cliente
+          tests:
+            - unique
+      columns:
+        - name: id_loja
+          tests:
+            - unique
