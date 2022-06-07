@@ -20,13 +20,23 @@ with
         from {{ref('stg_estabelecimento')}}
 )
     select
-    concat(
+    dados_cliente.personid as id_cliente
+    , dados_cliente.customerid as id_loja
+    ,concat(
         dados_comprador.firstname
         , dados_comprador.lastname
     ) as nome_comprador
-    , dados_cliente.personid
-    , dados_cliente.customerid
-    , estabelecimento.name
+    , estabelecimento.name as loja
+    , case
+        when name is null then 'B2C'
+        ELSE 'B2B'
+      end tipo_negocio
+    , case
+        when name is null then concat(
+        dados_comprador.firstname
+        , dados_comprador.lastname)
+        else name
+      end comprador
     from
         dados_cliente
         left join dados_comprador on dados_comprador.businessentityid = dados_cliente.personid
