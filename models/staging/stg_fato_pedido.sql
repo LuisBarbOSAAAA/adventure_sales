@@ -15,7 +15,7 @@ with
         , territoryid
         --, billtoaddressid
         , shiptoaddressid
-        , shipmethodid
+        --, shipmethodid
         , creditcardid
         --, creditcardapprovalcode
         --, currencyrateid
