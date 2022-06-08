@@ -1,0 +1,12 @@
+version: 2
+
+models:
+    - name: dim_territorio
+      description: tabela com informacoes sobre os territorios de compra dos produtos
+      config:
+        materialized: table
+      columns:
+        - name: id_endereco
+          tests:
+            - unique
+            - not_null

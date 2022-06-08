@@ -3,6 +3,8 @@ version: 2
 models:
     - name: dim_produto
       description: tabela com informacoes sobre os produtos comercializados na operacao
+      config:
+        materialized: table
       columns:
         - name: id_produto
           tests:

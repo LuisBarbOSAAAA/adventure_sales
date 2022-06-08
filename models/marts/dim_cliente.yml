@@ -3,6 +3,8 @@ version: 2
 models:
     - name: dim_cliente
       description: tabela com informacoes sobre os clientes
+      config:
+        materialized: table
       columns:
         - name: id_cliente
           tests:
