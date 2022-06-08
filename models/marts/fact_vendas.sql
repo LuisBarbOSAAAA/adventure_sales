@@ -34,6 +34,13 @@ with
     , detalhes.orderqty as qtde
     , detalhes.unitprice as preco_unidade
     , detalhes.linetotal as total_pedido
+    , case 
+        when status = 5 then 'enviado'
+        when status = 4 then 'rejeitado'
+        when status = 3 then 'em espera'
+        when status = 2 then 'aprovado'
+        when status = 1 then 'em processo'
+       end satus_pedido 
     from
         pedido
         left join detalhes on detalhes.salesorderid = pedido.salesorderid
