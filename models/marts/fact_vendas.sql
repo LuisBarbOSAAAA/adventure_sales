@@ -25,15 +25,15 @@ with
         from {{ref('stg_detalhes_pedido')}}
     )
     select
-    pedido.salesorderid
-    , pedido.customerid
-    , pedido.shiptoaddressid
-    , pedido.creditcardid
-    , detalhes.productid
+    pedido.salesorderid as id_pedido
+    , pedido.customerid as id_cliente
+    , pedido.shiptoaddressid as id_endereco
+    , pedido.creditcardid as id_cartao
+    , detalhes.productid as id_produto
     , pedido.status
-    , detalhes.orderqty
-    , detalhes.unitprice
-    , detalhes.linetotal
+    , detalhes.orderqty as qtde
+    , detalhes.unitprice as preco_unidade
+    , detalhes.linetotal as total_pedido
     from
         pedido
         left join detalhes on detalhes.salesorderid = pedido.salesorderid
