@@ -5,19 +5,4 @@ models:
       description: tabela com informacoes sobre os pedidos realizados
       config:
         materialized: table
-      columns:
-        - name: id_pedido
-          tests:
-            - not_null
-        - name: id_cliente
-          tests:
-            - not_null
-        - name: id_endereco
-          tests:
-            - not_null
-        - name: id_cartao
-          tests:
-            - not_null
-        - name: id_produto
-          tests:
-            - not_null
+      
