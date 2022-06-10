@@ -24,6 +24,7 @@ with
     , dados_cliente.customerid as id_loja
     ,concat(
         dados_comprador.firstname
+        , " "
         , dados_comprador.lastname
     ) as nome_comprador
     , estabelecimento.name as loja
