@@ -29,6 +29,7 @@ with
     , pedido.shiptoaddressid as id_endereco
     , pedido.creditcardid as id_cartao
     , detalhes.productid as id_produto
+    , pedido.orderdate as data_pedido
     , pedido.status
     , detalhes.orderqty as qtde
     , detalhes.unitprice as preco_unidade
