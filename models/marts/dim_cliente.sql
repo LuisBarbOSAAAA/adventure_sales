@@ -35,6 +35,7 @@ with
     , case
         when name is null then concat(
         dados_comprador.firstname
+        , " "
         , dados_comprador.lastname)
         else name
       end comprador
