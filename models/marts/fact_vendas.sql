@@ -44,4 +44,3 @@ with
     from
         pedido
         left join detalhes on detalhes.salesorderid = pedido.salesorderid
-    where productid is not null
