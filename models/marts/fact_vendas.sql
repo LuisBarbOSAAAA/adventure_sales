@@ -21,8 +21,7 @@ with
         , productid
         , unitprice
         , unitpricediscount
-        , linetotal
-        from {{ref('stg_detalhes_pedido')}}
+        from {{ref('stg_detalhes_pedido2')}}
     )
     select
     pedido.salesorderid as id_pedido
@@ -33,7 +32,7 @@ with
     , pedido.status
     , detalhes.orderqty as qtde
     , detalhes.unitprice as preco_unidade
-    , detalhes.linetotal as total_pedido
+    , sum (unitprice*orderqty)*(1-unitpricediscount) as total_pedido
     , case 
         when status = 5 then 'enviado'
         when status = 4 then 'rejeitado'
