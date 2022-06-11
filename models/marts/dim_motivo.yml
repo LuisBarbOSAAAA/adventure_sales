@@ -1,0 +1,14 @@
+version: 2
+
+models:
+    - name: dim_motivo
+      description: tabela com informacoes sobre motivo de pedido de compra
+      config:
+        materialized: table
+      columns:
+        - name: id_pedido
+          tests:
+            - not_null
+        - name: id_motivo
+          tests:
+            - not_null

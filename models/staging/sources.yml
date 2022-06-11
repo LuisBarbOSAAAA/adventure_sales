@@ -1,0 +1,17 @@
+version: 2
+sources:
+- name: adventure_dash_vendas
+  tables:
+    - name: cliente
+    - name: dados_pessoa_cliente
+    - name: detalhes_pedidos
+    - name: endereco_cidade
+    - name: endereco_estado
+    - name: endereco_pais
+    - name: fato_pedido
+    - name: header_motivo_venda
+    - name: motivo_venda
+    - name: produto
+    - name: tipo_cartao
+    - name: estabelecimento
+    - name: detalhe_venda2

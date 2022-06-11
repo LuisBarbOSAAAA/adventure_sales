@@ -1,0 +1,8 @@
+version: 2
+
+models:
+    - name: fact_vendas
+      description: tabela com informacoes sobre os pedidos realizados
+      config:
+        materialized: table
+      
